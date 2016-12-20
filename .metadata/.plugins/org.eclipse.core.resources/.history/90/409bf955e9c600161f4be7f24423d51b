@@ -1,0 +1,8 @@
+package com.rules4j.data;
+
+public interface IRule {
+
+	String getName();
+	String getFilters();
+	String getName();
+}

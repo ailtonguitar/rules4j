@@ -1,0 +1,10 @@
+package com.rules4j.data.filters;
+
+import com.rules4j.data.IRule;
+
+public abstract class Filter {
+
+	protected Filter(IRule rule){
+		
+	}
+}

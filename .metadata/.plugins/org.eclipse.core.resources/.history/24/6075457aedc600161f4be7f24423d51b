@@ -1,0 +1,17 @@
+package com.rules4j.engine;
+
+import java.util.List;
+import java.util.Map;
+
+import org.omg.CORBA.ObjectHelper;
+
+import com.rules4j.data.IRule;
+import com.rules4j.repository.IRuleStore;
+
+public class RuleEngine {
+	private IRuleStore store;
+
+	public RuleEngine(IRuleStore store) {
+		this.store = store;
+	}
+}

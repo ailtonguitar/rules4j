@@ -1,0 +1,41 @@
+package com.rules4j.data;
+
+import com.rules4j.data.filters.Filter;
+
+public class Rule implements IRule{
+
+	public Rule()
+    {
+        this.Filters = new List<Filter>();
+    }
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getFilters() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Filter addAndFilter() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Filter addOrFilter() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Filter addFilter(Filter filter) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

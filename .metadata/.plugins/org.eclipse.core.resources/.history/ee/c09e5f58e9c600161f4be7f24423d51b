@@ -1,0 +1,12 @@
+package com.rules4j.data;
+
+import com.rules4j.data.filters.Filter;
+
+public interface IRule {
+
+	String getName();
+	String getFilters();
+	Filter addAndFilter();
+	Filter addOrFilter();
+	Filter addFilter(Filter filter);
+}

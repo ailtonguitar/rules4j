@@ -1,0 +1,34 @@
+package com.rules4j.tests;
+
+import static org.junit.Assert.fail;
+
+import java.util.Dictionary;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+import com.rules4j.data.Rule;
+import com.rules4j.data.constraints.EqualsConstraint;
+
+public class RuleEngineTests {
+
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void shouldBePossibleEvaluateRule() {
+		var rule = new Rule();
+		var filter = rule.AddAndFilter();
+		filter.Add(new EqualsConstraint("Name", "John Doe"));
+		this.AddRule(rule);
+
+		var data = new Dictionary<string, object>();
+		data["Name"] = "John Doe";
+
+		var rules = this.Engine.Evaluate(data);
+
+		Assert.AreEqual(1, rules.Count());
+	}
+
+}

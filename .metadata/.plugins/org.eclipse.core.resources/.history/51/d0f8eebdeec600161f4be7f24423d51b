@@ -1,0 +1,29 @@
+package com.rules4j.tests;
+
+import com.rules4j.data.IRule;
+import com.rules4j.engine.IRuleEngine;
+import com.rules4j.engine.RuleEngine;
+import com.rules4j.repository.IRuleStore;
+
+public class TestBase {
+
+	private IRuleStore store;
+	protected IRuleEngine engine;
+
+	protected void Init() {
+		this.store = MemoryRuleStore.Default;
+		this.engine = new RuleEngine(this.store);
+	}
+
+	public void End() {
+		this.Clear();
+	}
+
+	protected void addRule(IRule rule) {
+		this.store.AddRule(rule);
+	}
+
+	private void clear() {
+		this.store.Clear();
+	}
+}

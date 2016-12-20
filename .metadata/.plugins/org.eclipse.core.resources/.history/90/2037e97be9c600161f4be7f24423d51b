@@ -1,0 +1,19 @@
+package com.rules4j.data.constraints;
+
+import java.util.Map;
+
+public class EqualsConstraint implements IConstraint{
+    private string _property;
+    private object _value;
+
+    public EqualsConstraint(string property, object value)
+    {
+        this._property = property;
+        this._value = value;
+    }
+	@Override
+	public boolean Evaluate(Map<String, Object> data) {
+		return false;
+	}
+
+}

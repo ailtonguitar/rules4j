@@ -1,0 +1,11 @@
+package com.rules4j.repository;
+
+import java.util.List;
+
+import com.rules4j.data.IRule;
+
+public interface IRulesStore {
+	   void AddRule(IRule rule);
+       List<IRule> Get();
+       void Clear();
+}

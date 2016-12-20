@@ -1,0 +1,5 @@
+package com.rules4j.engine;
+
+public class RuleEngine {
+
+}

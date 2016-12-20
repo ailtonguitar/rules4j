@@ -1,0 +1,16 @@
+package com.rules4j.data.filters;
+
+import com.rules4j.data.IRule;
+
+public class AndFilter extends Filter {
+	public AndFilter(IRule rule){
+    super(rule);
+ }
+
+	public override bool
+
+	Evaluate(IDictionary<string, object> data)
+    {
+        return this.Constraints.All(c => c.Evaluate(data));
+    }
+}

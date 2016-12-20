@@ -1,0 +1,7 @@
+package com.rules4j.repository;
+
+public interface IRulesStore {
+	   void AddRule(IRule rule);
+       IEnumerable<IRule> Get();
+       void Clear();
+}

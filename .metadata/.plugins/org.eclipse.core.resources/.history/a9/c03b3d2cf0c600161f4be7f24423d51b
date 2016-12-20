@@ -1,0 +1,10 @@
+package com.rules4j.helpers;
+
+import java.util.Map;
+
+public class ObjectHelper {
+
+	public static Map<String, Object> toMap(Object object){
+		
+	}
+}

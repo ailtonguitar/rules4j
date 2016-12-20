@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun com.rules4j.tests.RuleEngineTests.shouldBePossibleEvaluateRule" project="Rules4J.Tests" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testcase name="shouldBePossibleEvaluateRule" classname="com.rules4j.tests.RuleEngineTests" incomplete="true"/>
+</testrun>

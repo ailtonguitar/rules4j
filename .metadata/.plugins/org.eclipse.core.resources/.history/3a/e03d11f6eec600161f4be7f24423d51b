@@ -1,0 +1,27 @@
+package com.rules4j.repository;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.rules4j.data.IRule;
+
+public class MemoryRuleStore {
+	private MemoryRuleStore() {
+	}
+
+	private List<IRule> _rules = new ArrayList<IRule>();
+
+	public static IRuleStore Default = new MemoryRuleStore();
+
+	public void AddRule(IRule rule) {
+		this._rules.add(rule);
+	}
+
+	public List<IRule> Get() {
+		return this._rules;
+	}
+
+	public void Clear()
+    {
+    }
+}

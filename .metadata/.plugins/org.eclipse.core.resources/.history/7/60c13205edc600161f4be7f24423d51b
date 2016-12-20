@@ -1,0 +1,48 @@
+package com.rules4j.engine;
+
+import java.util.List;
+import java.util.Map;
+
+import org.omg.CORBA.ObjectHelper;
+
+import com.rules4j.data.IRule;
+import com.rules4j.repository.IRuleStore;
+
+public class RuleEngine {
+	private IRuleStore store;
+
+	public RuleEngine(IRuleStore store) {
+		this.store = store;
+	}
+
+	public List<IRule> Evaluate(Map<String, Object> data)
+     {
+         return _pool.Get().Where(r => r.Filters.All(f => f.Evaluate(data)));
+     }
+
+	public IEnumerable<IRule> Evaluate(object data) {
+		return this.Evaluate(ObjectHelper.ToDictionary(data));
+	}
+
+	public IEnumerable<IRule> EvaluateAndFire(object data) {
+		var rules = this.Evaluate(data);
+		FireRulesEvent(data, rules);
+		return rules;
+	}
+
+	public IEnumerable<IRule> EvaluateAndFire(IDictionary<string, object> data) {
+		var rules = this.Evaluate(data);
+		FireRulesEvent(data, rules);
+		return rules;
+	}
+
+	private void FireRulesEvent(object data, IEnumerable<IRule> rules)
+     {
+         foreach (var rule in rules)
+         {
+             var listener = ListenerRepository.GetListener(rule.Name);
+             if (listener != null)
+                 listener.Handle(data);
+         }
+     }
+}
