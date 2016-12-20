@@ -1,7 +1,0 @@
-package com.rules4j.data.constraints;
-
-import java.util.Map;
-
-public interface IConstraint {
-	boolean Evaluate(Map<String, Object> data);
-}

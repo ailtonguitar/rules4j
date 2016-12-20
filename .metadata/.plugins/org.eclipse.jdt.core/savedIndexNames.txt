@@ -1,4 +1,0 @@
-INDEX VERSION 1.127+C:\Users\Ailton\Rules\.metadata\.plugins\org.eclipse.jdt.core
-2745191681.index
-1686983875.index
-1683568984.index

@@ -1,7 +1,0 @@
-package com.rules4j.helpers;
-
-public class ObjectHelper {
-
-	public static Map<String, Object> toMap(Object object){
-	}
-}

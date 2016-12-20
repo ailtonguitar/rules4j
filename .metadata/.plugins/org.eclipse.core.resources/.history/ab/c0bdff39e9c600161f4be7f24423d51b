@@ -1,5 +1,0 @@
-package com.rules4j.data.constraints;
-
-public interface IConstraint {
-
-}
